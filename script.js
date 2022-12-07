@@ -21,9 +21,9 @@ async function getData(url) {
         heading3 = document.getElementsByClassName('detail2')[0];
         
         
-        heading2.innerHTML =`<b>${data.results[0].dob.age}</b>` ;
+        // heading2.innerHTML =`<b>${data.results[0].dob.age}</b>` ;
   
-        heading3.innerHTML = `<br>${data.results[0].email}`+ "<br>" +`${data.results[0].phone}`;
+        // heading3.innerHTML = `<br>${data.results[0].email}`+ "<br>" +`${data.results[0].phone}`;
         
       document.getElementById('getUser').onclick = ()=>{
 
