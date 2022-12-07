@@ -1,6 +1,6 @@
 const url ="https://randomuser.me/api/";
 
-
+document.getElementsByTagName("img")[0].style.visibility="hidden";
 
 async function getData(url) {
 
@@ -11,9 +11,9 @@ async function getData(url) {
     console.log(data.results[0]);
 
         document.getElementById('name').innerHTML =  `${data.results[0].name.first} ${data.results[0].name.last}`;
-      
+        document.getElementsByTagName("img")[0].style.visibility="visible";
       const image = document.getElementsByTagName("img")[0];
-      
+        
         image.src = `${data.results[0].picture.large}`;
 
         about = document.getElementsByClassName('about')[0];
@@ -46,7 +46,7 @@ async function getData(url) {
     }
     
     document.getElementsByClassName("phn_no")[0].onclick = ()=>{
-
+      
       heading2.innerHTML =`` ;      
       heading3.innerHTML = `${data.results[0].phone}`;
   
@@ -58,7 +58,7 @@ async function getData(url) {
 
      
 document.getElementById('getUser').addEventListener('click', ()=>{
-      
+ 
       getData(url);
 
 })
