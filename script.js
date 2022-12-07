@@ -16,47 +16,47 @@ async function getData(url) {
         
         image.src = `${data.results[0].picture.large}`;
 
-        about = document.getElementsByClassName('about')[0];
-        heading2 = document.getElementsByClassName('detail1')[0];
-        heading3 = document.getElementsByClassName('detail2')[0];
+       
         
-        
-        // heading2.innerHTML =`<b>${data.results[0].dob.age}</b>` ;
-  
-        // heading3.innerHTML = `<br>${data.results[0].email}`+ "<br>" +`${data.results[0].phone}`;
-        
+    
       document.getElementById('getUser').onclick = ()=>{
 
+        heading2 = document.getElementsByClassName('detail1')[0];
+        heading3 = document.getElementsByClassName('detail2')[0];
         heading2.innerHTML =`<b>${data.results[0].dob.age}</b>` ;     
         heading3.innerHTML = `<br>${data.results[0].email}`+ "<br>" +`${data.results[0].phone}`;
 
       }
-        document.getElementsByClassName("age")[0].onclick = ()=>{
+        document.getElementsByClassName("age")[0].addEventListener('click', ()=>{
 
+          heading2 = document.getElementsByClassName('detail1')[0];
+          heading3 = document.getElementsByClassName('detail2')[0];
           heading2.innerHTML =`<b>${data.results[0].dob.age}</b>` ; 
-          heading3.innerHTML = ``;
-          
-      }
+          heading3.innerHTML = ``;     
+      })
       
-      document.getElementsByClassName("email")[0].onclick = ()=>{
-
+      document.getElementsByClassName("email")[0].addEventListener('click', ()=>{
+      
+        heading2 = document.getElementsByClassName('detail1')[0];
+        heading3 = document.getElementsByClassName('detail2')[0];
         heading2.innerHTML =``;     
         heading3.innerHTML = `${data.results[0].email}`;
     
-    }
+    })
     
-    document.getElementsByClassName("phn_no")[0].onclick = ()=>{
+    document.getElementsByClassName("phn_no")[0].addEventListener('click', ()=>{
       
       heading2.innerHTML =`` ;      
       heading3.innerHTML = `${data.results[0].phone}`;
   
-  }
+  })
   
     
 
 }
 
-     
+getData(url);   
+
 document.getElementById('getUser').addEventListener('click', ()=>{
  
       getData(url);
