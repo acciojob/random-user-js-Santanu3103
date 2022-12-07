@@ -1,2 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background-color: rgb(152, 175, 204);
+    margin: 10px;
+    margin-left: 20vw;
+    display: grid;
+    grid-template-columns: repeat(2,350px);
+    grid-template-rows: [row1-start] 35% [row1-end] 100px ;
+}
 
-/* Your CSS Code here. */
+.name{
+    width: 400px;
+}
+
+p{
+   display: flex;
+   left: 500px;
+}
+
+img{
+    height: 35vh;
+    width: 300px;
+    border-radius: 20px;
+}
+
+button{
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
