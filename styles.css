@@ -1,15 +1,27 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     height: 100vh;
-    background-color: rgb(152, 175, 204);
+    width: 100vw; 
     margin: 10px;
     margin-left: 20vw;
-    display: grid;
-    grid-template-columns: repeat(2,350px);
-    grid-template-rows: [row1-start] 35% [row1-end] 100px ;
+    display: flex;
+   align-items: center;
+}
+.container{
+    height: 70vh;
+    width: 60vw;
+    background-color: #b61b3c;
+    color:#cec10e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
 }
 
 .name{
@@ -32,4 +44,6 @@ button{
     padding: 5px 15px;
     border-radius: 5px;
     margin: 10px;
+    color: #aaa011;
+    background-color: #384381;
 }
